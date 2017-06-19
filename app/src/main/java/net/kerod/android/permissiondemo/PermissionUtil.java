@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -29,7 +30,10 @@ public abstract class PermissionUtil {
     }
 
     public static void requestPermission(@NonNull AppCompatActivity activity, int requestCode, @NonNull String requestedPermission, String rationale, boolean finishActivityIfPermissionDenied) {
-        if (isPermissionGranted(requestedPermission)) {
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return; // permission is introduced on M
+        } else if (isPermissionGranted(requestedPermission)) {
             //we do not need to do anything! Permission asked previously and the user granted it.
         } else if (!SettingsManager.isPermissionRequested(requestedPermission)) {
             //user hasn't seen the permission request previously
