@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PermissionDemo</string>
+    <string name="settings">Settings</string>
+    <string name="grant">Grant</string>
+    <!--    Permissions    -->
+    <string name="permission_enable_help_dialog">This app uses some features of your device location sensor  to give you the best experience.\n\nPlease go to SETTINGS and click PERMISSIONS section to grant the permission.\n</string>
+    <string name="permission_rationale_location">Access to the location service is required to show you the route from your current location to nearest location...</string>
+    <string name="permission_rationale_write_external_storage">To save the downloaded file, the app needs permission to write on disk</string>
+    <string name="location_permission_denied">This app requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'PermissionDemo\'.</string>
+    <string name="permission_required_toast">You denied a permission.\nThe app may not without these permissions.</string>
+    <string name="permission_solicit_grant">Please grant permission</string>
+    <!--preferences-->
+    <string name="pref_key_first_time_launch">pref_key_first_time_launch</string>
+    <string name="pref_key_agreed_terms_of_service">pref_key_agreed_terms_of_service</string>
+
+    <!---->
+    <string name="enable_location">Enable location</string>
+    <!---->
+
+</resources>
